@@ -24,8 +24,8 @@ class udev(
   $config_file_replace = $udev::params::config_file_replace,
   $rules = $udev::params::rules,
 ) inherits udev::params {
-  validate_re($udev_log, '^err$|^info$|^debug$')
-  validate_bool($config_file_replace)
+  #validate_re($udev_log, '^err$|^info$|^debug$')
+  #validate_bool($config_file_replace)
 
   anchor { 'udev:begin': }
   -> package{ $udev::params::udev_package:
